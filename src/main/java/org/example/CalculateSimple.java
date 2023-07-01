@@ -6,13 +6,13 @@ public class CalculateSimple {
     }
 
     public int division(int a, int b) {
-        try {
-            return a / b;
-        } catch (ArithmeticException exception) {
-            System.out.println("Ошибка! На ноль делить нельзя! " + exception);
-        }
+        if (b == 0) {
 
-        return 0;
+            System.out.println("Вы пытаетесь делить на ноль!\n"
+                    + "Измените значение делителя");
+            return Integer.MIN_VALUE;
+        }
+        return a / b;
     }
 
     public int multiplication(int a, int b) {

@@ -12,11 +12,10 @@ class CalculateSimpleTest {
     }
 
     @Test
-    void division() throws ArithmeticException {
+    void division() {
         var testDivision = new CalculateSimple();
         Assertions.assertEquals(2, testDivision.division(6, 3));
-        Assertions.assertEquals(0, testDivision.division(6, 0));
-
+        Assertions.assertEquals(Integer.MIN_VALUE,testDivision.division(10, 0));
     }
 
     @Test
